@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>DevOps Summative Demo</title>
+</head>
+<body>
+<h1>DevOps Summative Demo</h1>
+<p>This site is deployed by GitHub Actions + OpenTofu + AWS S3.</p>
+
+<p>Status: <span id="status">Not clicked</span></p>
+<button id="btn">Click me</button>
+
+<script>
+    const status = document.getElementById("status");
+    document.getElementById("btn").addEventListener("click", () => {
+        status.textContent = "Clicked at " + new Date().toLocaleTimeString();
+    });
+</script>
+</body>
+</html>
